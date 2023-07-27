@@ -1,0 +1,49 @@
+# Criar a Virtual Environments do Python
+python -m venv <name>
+
+# Ativando a estrutura
+source bin/activate
+
+# Criando o projeto
+django-admin startproject <nome> .
+
+# Alterando time Zome
+# Alterar as informações do arquivo settings.py
+# TIME_ZONE, altere seu conteúdo para “America/Manaus”
+
+# Criando o banco de dados
+python3 manage.py migrate
+
+# iniciando o servidor
+python3 manage.py runserver
+
+# Criando um App
+python3 manage.py startapp django_app
+
+# "Porém, antes que comece com a criação de seus próprios modelos e views, primeiro você deve informar ao seu projeto Django sobre a existência do seu novo aplicativo. Para fazer isso, precisamos modificar o arquivo settings.py, contido dentro de diretório de configuração do seu projeto.
+# Abra o arquivo e encontre a tupla INSTALLED_APPS. Adicione o aplicativo django_app que acabamos de criar no fim da tupla " - Fonte (https://www.devmedia.com.br/como-criar-um-blog-com-django-e-python/33710)
+
+# Criando uma View do aplicativo
+from django.shortcuts import render
+from django.http import HttpResponse
+def index(request):
+    return HttpResponse("<h1>Olá mundo, Django!</h1>")
+
+# Criando a url
+# criar o arquivo urls.py
+from django.urls import include, path
+from <name> import views
+
+urlpatterns = [
+        path('', views.index, name='index'),
+        ]
+
+# Dentro do projeto alterar  o arquivo urls.py
+from django.contrib import admin
+from django.urls import path
+from django.conf.urls import include, url
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    url(r'^<name>/', include('<name>.urls')),
+]
