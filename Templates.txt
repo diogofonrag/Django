@@ -1,1 +1,6 @@
+# Criar uma nova pasta dentro do projeto chamada templates
+
+# Além disso, precisamos dizer ao Django que esse diretório existe e que ele está associado à casa dos templates do projeto. Portanto, vá novamente até o arquivo settings.py e adicione uma nova tupla TEMPLATE_DIRS ao mesmo, logo após a tupla 
+#TEMPLATES - Fonte (https://www.devmedia.com.br/como-criar-um-blog-com-django-e-python/33710)
+
 
