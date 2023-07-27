@@ -3,4 +3,15 @@
 # Além disso, precisamos dizer ao Django que esse diretório existe e que ele está associado à casa dos templates do projeto. Portanto, vá novamente até o arquivo settings.py e adicione uma nova tupla TEMPLATE_DIRS ao mesmo, logo após a tupla 
 #TEMPLATES - Fonte (https://www.devmedia.com.br/como-criar-um-blog-com-django-e-python/33710)
 
+exemplo:
+TEMPLATES_DIR = ('/home/diogo/Python_make/pro-stme/Stme_app/templates/www-stme/',)
 
+# Alterar  a urls.py do projeto para:
+from django.contrib import admin
+from django.urls import include, path
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('Stme_app/', include('Stme_app.urls')),
+
+# Alterar a urls.py do app para:
