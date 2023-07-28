@@ -47,3 +47,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^<name>/', include('<name>.urls')),
 ]
+
+# Criando a pasta static dentro do app
+# Configurando a pasta static no projeto:
+STATIC_URL = 'static/'
+STATIC_ROOT = Path.joinpath(BASE_DIR, 'static/')
