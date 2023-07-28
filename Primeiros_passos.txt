@@ -40,12 +40,11 @@ urlpatterns = [
 
 # Dentro do projeto alterar  o arquivo urls.py
 from django.contrib import admin
-from django.urls import path
-from django.conf.urls import include, url
+from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^<name>/', include('<name>.urls')),
+    path('Stme_app/', include('Stme_app.urls')),
 ]
 
 # Criando a pasta static dentro do app
