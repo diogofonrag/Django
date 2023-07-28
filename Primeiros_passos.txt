@@ -27,7 +27,7 @@ python3 manage.py startapp django_app
 from django.shortcuts import render
 from django.http import HttpResponse
 def index(request):
-    return HttpResponse("<h1>Olá mundo, Django!</h1>")
+ return render(request, 'www_stme/index.html')
 
 # Criando a url
 # criar o arquivo urls.py
